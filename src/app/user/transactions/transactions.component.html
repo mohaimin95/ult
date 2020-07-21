@@ -1,0 +1,22 @@
+<div class="container">
+    <a routerLink="/user" class="btn btn-primary float-right">New Payment</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Amount</th>
+                <th>Company Name</th>
+                <th>Transaction Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let transaction of transactions">
+                <td>{{transaction.id}}</td>
+                <td>{{transaction.amount | currency:"INR"}}</td>
+                <td>{{transaction.companyName}}</td>
+                <td>{{transaction.createdAt | date}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Company Name</th>
+                <th>Country</th>
+                <th>Pay</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let company of companies">
+                <td>{{company.companyName}}</td>
+                <td>{{company.country}}</td>
+                <td><a [routerLink]="'/user/proceed-payment/'+company.id" class="btn btn-primary">Pay Now</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
